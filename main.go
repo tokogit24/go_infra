@@ -50,7 +50,7 @@ func main() {
 		jenkinsServer, err := ec2.NewInstance(ctx, "jenkins-server", &ec2.InstanceArgs{
 			InstanceType:        pulumi.String("t2.micro"),
 			VpcSecurityGroupIds: pulumi.StringArray{sg.ID()},
-			Ami:                 pulumi.String("ami-0a0277ba899dd9fd3"),
+			Ami:                 pulumi.String("ami-02bf8ce06a8ed6092"),
 			KeyName:             kp.KeyName,
 		})
 
